@@ -3,8 +3,11 @@ image:
 - Visual Studio 2015
 clone_depth: 1
 
+<<<<<<< HEAD
 artifacts:
 - path: nlp_windows-$(appveyor_repo_tag_name).zip
+=======
+>>>>>>> travis
 skip_non_tags: false
 platform: x64
 
@@ -15,6 +18,7 @@ build_script:
 
     build\test.bat
 
+<<<<<<< HEAD
 after_build:
 - cmd: >-
     build\package.bat
@@ -25,3 +29,5 @@ deploy:
  auth_token: $(GITHUB_APIKEY)
  on:
   appveyor_repo_tag: true
+=======
+>>>>>>> travis

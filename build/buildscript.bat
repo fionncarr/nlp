@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 if "%APPVEYOR_REPO_TAG%"=="true" (
  set NLP_VERSION=%APPVEYOR_REPO_TAG_NAME%
 ) else (
@@ -9,6 +10,12 @@ perl -p -i.bak -e s/NLPVERSION/`\$\"%NLP_VERSION%\"/g nlp.q
 if not defined QLIC_KC (
  goto :nokdb
 )
+=======
+if not defined QLIC_KC (
+ goto :nokdb
+)
+
+>>>>>>> travis
 call "build\getkdb.bat" || goto :error
 
 set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
